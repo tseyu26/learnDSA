@@ -75,7 +75,7 @@ bool List::del(int posi) {
         delete(q);
         return true;
     }
-    //del nail node
+    //del tail node
     if (posi == length){
         Point *a =q;
         for (int i{0};i<posi-1;i++){
@@ -85,7 +85,7 @@ bool List::del(int posi) {
         length--;
         return true;
     }else{
-        //del neither head nor nail
+        //del neither head nor tail
         for(int i{0};i<posi-1;i++){
             q = q->getnext();
         }
@@ -122,7 +122,7 @@ bool List::insert(int posi, int data){
 
 int List::find(int posi) {
     if (posi <0 || posi >length){
-        std::cout << "del error";
+        std::cout << "error";
         return 0;
     }
     Point *p =head;
@@ -154,5 +154,6 @@ int main(){
         std::cout << l.find(i)<<" ";
     }
     std::cout << std::endl;
+
     return 0;
 }
