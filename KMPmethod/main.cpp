@@ -73,7 +73,7 @@ void kmpSearch(const char *text, const char *pattern){
     int n = strlen(pattern);
     int *pmt = new int[n];
     prefixTable(pattern,pmt,n);
-   
+
     movePmt(pmt, n);
 
     // text[i]     len:m
@@ -97,7 +97,7 @@ void kmpSearch(const char *text, const char *pattern){
             }
         }
     }
-
+    delete [] pmt;
 }
 
 int main(){
