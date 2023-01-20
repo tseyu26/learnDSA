@@ -9,7 +9,7 @@ void insSort(T arr[], int arrayLen){
         if (arr[i] <= arr[i+1]){
             continue;
         }else{
-            int tempOut = arr[i];
+            T tempOut = arr[i];
             arr[i] = arr[i+1];
             arr[i+1] = tempOut;
             for (int j{i};j > 0;j--){
