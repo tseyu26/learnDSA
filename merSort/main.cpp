@@ -37,7 +37,7 @@ void conArray(T1 arr[], int low, int mid, int high){
         i++;
     }
 
-    //delete[] tempArray;
+    delete[] tempArray;
 }
 
 template<typename T>
